@@ -12,6 +12,8 @@ The dataset is located in file gym_members_exercise_tracking.csv
 
 The notebook is located in file gym.ipynb
 
+The poster is located in file F5_project.pdf
+
 The HTML application consists of files: app.py, index.html (located in folder templates)
 
 Everything related to dataset analyzation is in the notebook
@@ -19,7 +21,7 @@ Everything related to dataset analyzation is in the notebook
 (If you want to replicate the same analysis, just follow the notebook)
 
 To use HTML application
-1. You need to copy repository
+1. You need to copy the repository
 2. You need to install flask by !pip install flask
 3. You need to run app.py with flask via console
 4. Open the localhost website
