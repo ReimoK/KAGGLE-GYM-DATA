@@ -16,6 +16,8 @@ The HTML application consists of files: app.py, index.html (located in folder te
 
 Everything related to dataset analyzation is in the notebook
 
+(If you want to replicate the same analysis, just follow the notebook)
+
 To use HTML application
 1. You need to copy repository
 2. You need to install flask by !pip install flask
