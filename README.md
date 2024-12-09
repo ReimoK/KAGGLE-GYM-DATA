@@ -9,9 +9,13 @@ Goal: Develop data-driven insights to optimize workout plans for different fitne
 # Guide
 
 The dataset is located in file gym_members_exercise_tracking.csv
+
 The notebook is located in file gym.ipynb
+
 The HTML application consists of files: app.py, index.html (located in folder templates)
+
 Everything related to dataset analyzation is in the notebook
+
 To use HTML application
 1. You need to copy repository
 2. You need to install flask by !pip install flask
