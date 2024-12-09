@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Burned Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Calories Burned Prediction</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" placeholder="Male/Female" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" step="0.001" id="weight" name="weight" required>
+        </div>
+        <div class="form-group">
+            <label for="height">Height (m)</label>
+            <input type="number" step="0.001" id="height" name="height" required>
+        </div>
+        <div class="form-group">
+            <label for="avg_bpm">Average BPM</label>
+            <input type="number" id="avg_bpm" name="avg_bpm" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="session_duration">Session Duration (hours)</label>
+            <input type="number" step="0.01" id="session_duration" name="session_duration" required>
+        </div>
+        <div class="form-group">
+            <label for="experience_level">Experience Level (1 to 3)</label>
+            <input type="number" id="experience_level" name="experience_level" min="1" max="5" required>
+        </div>
+        <button type="submit">Predict Calories Burned</button>
+    </form>
+
+    {% if prediction is not none %}
+    <div class="result">
+        Predicted Calories Burned: {{ prediction }} kcal
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
